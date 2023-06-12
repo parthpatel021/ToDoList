@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 // mongoose.connect("mongodb://localhost:27017/todolistDB",{useNewUrlParser: true});
-// mongoose.connect("mongodb+srv://parthkumar111patel:18216017@cluster0-Shuel.mongodb.net/todolistDB",{useNewUrlParser: true});
 
 
 const database = module.exports = () => {
@@ -22,7 +21,7 @@ const database = module.exports = () => {
     }
     try{
         mongoose.connect(
-            "mongodb+srv://parthkumar111patel:18216017@cluster0.q0ns8st.mongodb.net/todolistDB?retryWrites=true&w=majority",
+            
             connectionParams
         );
         console.log("Database connect successfully!");
